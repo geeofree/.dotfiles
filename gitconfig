@@ -1,0 +1,43 @@
+[alias]
+   # br — list branches
+    br = branch
+
+    # rmbrs — remove branches
+    rmbrs = "!f() { git br --list $1 | xargs -r git br -D; }; f"
+
+    # cc — clean all changes made
+    cc = "!f() { git clean -fd && git reset --hard; }; f"
+
+    # cb — prints the current working branch's name
+    cbname = rev-parse --abbrev-ref HEAD
+
+    # ft — fetch branches from origin
+    ft = fetch
+
+    # rh — syncs the current working branch's HEAD w/ the given branch argument
+    rh = reset --hard
+
+    # rb — rebases the current working branch w/ the given branch argument
+    rb = pull --rebase
+
+    # ps — push changes on the current working branch
+    ps = "!f() { git cbname | xargs -I {} sh -c 'git push origin {}'; }; f"
+
+    # psf — force push changes on the current working branch
+    psf = "!f() { git cbname | xargs -I {} sh -c 'git push -f origin {}'; }; f"
+
+    # aa - add all changes
+    aa = add .
+
+    # aam - add all changes and append them to the last commit
+    aam = commit -a --amend -C HEAD;
+
+    # cm - commit
+    cm = commit
+
+    # co - checkout to a branch
+    co = checkout
+[core]
+	editor = nvim
+[credential]
+	helper = get_git_credentials
