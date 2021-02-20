@@ -122,8 +122,8 @@ nd() # New Directory: mkdir + cd
 	mkdir -p $1 && cd $_ && pwd;
 }
 
-# @@@ Tokens
-source path_to_tokens
+# @@@ Secret stuff
+source $HOME/.secrets.sh
 
 # @@@ Load NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
