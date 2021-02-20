@@ -43,4 +43,4 @@
    email = "$GITHUB_USER_EMAIL"
    name="$GITHUB_USER_NAME"
 [credential]
-	helper = "get_git_credentials"
+	helper = "!f() { echo \"username=$GH_CREDENTIAL_USERNAME\"; echo \"password=$GH_CREDENTIAL_PASSWORD\"; };f"
