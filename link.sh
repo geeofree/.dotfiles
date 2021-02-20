@@ -1,5 +1,6 @@
 link_file() {
-  ln -s $PWD/$1 $PWD/.$1;
+  rm $HOME/.$1 2> /dev/null;
+  ln -s $PWD/$1 $HOME/.$1;
 }
 
 link_file "zshrc"
