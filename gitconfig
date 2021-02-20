@@ -40,7 +40,7 @@
 [core]
 	editor = nvim
 [user]
-   email = "$GITHUB_USER_EMAIL"
-   name="$GITHUB_USER_NAME"
+   email = "!f() { echo $GITHUB_USER_EMAIL; };f;unset f;"
+   name = "!f() { echo $GITHUB_USER_NAME; };f;unset f;"
 [credential]
 	helper = "!f() { echo \"username=$GH_CREDENTIAL_USERNAME\"; echo \"password=$GH_CREDENTIAL_PASSWORD\"; };f"
