@@ -39,5 +39,8 @@
     co = checkout
 [core]
 	editor = nvim
+[user]
+   email = "$GITHUB_USER_EMAIL"
+   name="$GITHUB_USER_NAME"
 [credential]
-	helper = get_git_credentials
+	helper = "get_git_credentials"
