@@ -1,6 +1,11 @@
+# Geo's Dot Files
 OS: Ubuntu 20.04
 
-Install
+## Usage
+Run link script `./link.sh` -- this will relink the config files; removing them, then creating a symbolic link for
+each config file specified in the script.
+
+## Install
 - **neovim** - text editor
 - **vim-plug** - vim plugin manager
 - **tmux** - terminal window manager
