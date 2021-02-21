@@ -1,4 +1,4 @@
-# Geo's Dot Files
+# Dot Files
 OS: Ubuntu 20.04
 
 ## Usage
