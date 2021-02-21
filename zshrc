@@ -117,9 +117,16 @@ alias bat=batcat
 
 # @@@ Functions
 
-nd() # New Directory: mkdir + cd
-{
+# New Directory: mkdir + cd
+ndir() {
 	mkdir -p $1 && cd $_ && pwd;
+}
+
+# Set Git user identity
+set_git_user() {
+	git config user.name $GH_USER_NAME;
+	git config user.email $GH_USER_EMAIL;
+	echo "\e[0;2mGit user\e[0m $GH_USER_NAME<$GH_USER_EMAIL> \e[0;32mOK\e[0m"
 }
 
 # @@@ Secret stuff

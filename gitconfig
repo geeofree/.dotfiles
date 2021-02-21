@@ -39,8 +39,5 @@
     co = checkout
 [core]
 	editor = nvim
-[user]
-   email = "$GH_USER_EMAIL"
-   name = "$GH_USER_NAME"
 [credential]
 	helper = "!f() { echo \"username=$GH_CREDENTIAL_USERNAME\"; echo \"password=$GH_CREDENTIAL_PASSWORD\"; };f"
