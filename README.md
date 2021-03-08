@@ -14,6 +14,9 @@ each config file specified in the script.
 - **ripgrep** - line-oriented search tool
 - **nvm** - nodejs version manager
 - **git** - vcs
+
+- **bat** - cat, but with syntax highlighting
+- **gogh** - colorscheme
 - **inkscape** - vector based editing software
 - **gimp** - photo editing software
 - **firefox** - web browser
