@@ -113,7 +113,7 @@ source /usr/share/doc/fzf/examples/completion.zsh
 
 # @@@ Aliases
 alias xopen=xdg-open
-alias bat=batcat
+alias cat=batcat
 
 # @@@ Functions
 
