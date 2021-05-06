@@ -117,6 +117,21 @@ alias cat=batcat
 
 # @@@ Functions
 
+# Execute todo list
+todo() {
+	[ ! -d /tmp/todos ] && mkdir /tmp/todos;
+
+	FILE="$(date '+TODO_%F')";
+
+	if [ -z $1 ]; then
+		TITLE="TODO $(date '+%F')";
+	else
+		TITLE="$1 $(date '+%F')";
+	fi
+
+	npx ishould $TITLE -f "/tmp/todos/$FILE.json";
+}
+
 # New Directory: mkdir + cd
 ndir() {
 	mkdir -p $1 && cd $_ && pwd;
