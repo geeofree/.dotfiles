@@ -119,7 +119,7 @@ alias cat=batcat
 
 # Execute todo list
 todo() {
-	[ ! -d /tmp/todos ] && mkdir /tmp/todos;
+	[ ! -d /var/tmp/todos ] && mkdir /var/tmp/todos;
 
 	FILE="$(date '+TODO_%F')";
 
@@ -129,7 +129,7 @@ todo() {
 		TITLE="$1 $(date '+%F')";
 	fi
 
-	npx ishould $TITLE -f "/tmp/todos/$FILE.json";
+	npx ishould $TITLE -f "/var/tmp/todos/$FILE.json";
 }
 
 # New Directory: mkdir + cd
