@@ -111,6 +111,9 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 
+# @@@ Docker rootless config
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
+
 # @@@ Aliases
 alias xopen=xdg-open
 alias cat=batcat
